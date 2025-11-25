@@ -1,0 +1,27 @@
+📌 Challenge Information
+Category: Network Forensics / Malware Traffic Analysis
+Difficulty: Medium
+Points: 100
+Author: [Your Name]
+Files: challenge_traffic.pcap (or capture your own)
+
+📖 Challenge Description
+Our Security Operations Center (SOC) detected unusual network activity from a workstation in the engineering department. The employee reported that their computer has been acting strangely - slow performance, unexpected network activity, and suspicious processes running in the background.
+The incident response team quickly isolated the machine and captured all network traffic during the suspected compromise window. Your mission, should you choose to accept it, is to analyze this packet capture and uncover what the attacker was doing.
+Intelligence suggests that the malware uses a covert channel to exfiltrate sensitive data character-by-character, hiding in plain sight among normal network traffic.
+🎯 Your Objective
+Analyze the provided packet capture file and find the hidden flag that was exfiltrated from the compromised machine.
+Flag format: CTF{...}
+📦 What You'll Need
+
+Wireshark or tshark
+Basic understanding of TCP/IP protocols
+Patience and attention to detail
+(Optional) Python with Scapy for automated analysis
+
+
+🚩 The Story
+It started with a phishing email. An employee clicked a malicious link, and within minutes, malware was installed on their workstation. The malware established a connection to a Command & Control (C2) server and began exfiltrating sensitive data.
+But this wasn't your typical smash-and-grab operation. The attackers were clever - they used a covert channel technique to slowly exfiltrate data, hoping to blend in with normal network traffic. They knew that security teams monitor for large data transfers, so they went low and slow.
+The data was broken down into individual characters and sent one byte at a time, hidden within seemingly innocent network packets. Among the noise of ARP broadcasts, ICMP pings, DNS queries, and web browsing traffic, the malicious packets flew under the radar.
+Until now.
