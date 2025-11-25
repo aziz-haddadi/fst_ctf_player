@@ -7,6 +7,7 @@
 ## 📝 Description
 
 A SOC analyst captured network traffic from a suspected compromised workstation. Intelligence suggests the malware uses a covert channel to exfiltrate data character-by-character, hiding among normal network traffic. Your job is to analyze the packet capture and uncover what the attackers stole.
+ nc 13.62.103.4 1339
 
 ## 📁 Provided Files
 
